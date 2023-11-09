@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ubicaci&oacute;n</title>
+    <link rel="shortcut icon" href="Logo.png">
+    <link rel="stylesheet" href="index.css">
+    <style>
+      .content-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      .formulario {
+        margin: 10px;
+        position: relative;
+        width: 50%;
+      }
+      
+      .formulario h1{
+         font-size: 1.3em;
+      }
+
+
+      #map {
+        height: 400px;
+        width: 100%; /* El mapa ocupa todo el ancho disponible */
+      }
+
+      
+:root {
+	--primary-color: pink;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ************* NAVBAR ************* */
+.container-navbar {
+	background-color: var(--primary-color);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: var(--dark-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 2rem;
+	background-color: #fff;
+	height: 4.4rem;
+	overflow: hidden;
+}
+
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+	width: 25rem;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+	color: #777;
+	cursor: pointer;
+}
+
+.search-form input::-webkit-search-cancel-button {
+	appearance: none;
+}
+
+.search-form .btn-search {
+	border: none;
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 1rem;
+}
+
+.btn-search i {
+	font-size: 2rem;
+	color: #fff;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">6568625128</span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    
+                    <h1 class="logo"><a>Flourish</a></h1>
+                </div>
+                    </i>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Iniciar sesi&oacute;n</a></li>
+                    <li><a href="ubicacion.html">Ubicaci&oacute;n</a></li>
+                    <li><a href="#">Productos</a></li>
+                    
+                </ul>
+
+                
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="content-container">
+      <div class="formulario">
+        
+        <div id="map"></div>
+
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjddPYI6zFlzY2cDUpSYN0rX3oktm5QwM&callback=initMap" async defer></script>
+        <script>
+            var map;
+        function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 31.69400760627884, lng: -106.37135753160102},
+          zoom: 13,
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 31.69400760627884, lng: -106.37135753160102},
+          map: map,
+          title: 'Flourish'
+        });
+      }
+    </script>
+        </div>
+        
+    </div>
+
+  </body>
+</html>
